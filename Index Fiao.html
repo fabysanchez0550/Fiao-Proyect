@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIA'O | Tu libreta de crédito, ahora digital</title>
+  <meta name="description" content="FIA'O digitaliza clientes, deudas y pagos para tiendas y negocios pequeños de Panamá.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">FIA'O</a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#funciones" data-tab="credito">Crédito</a>
+        <a href="#funciones" data-tab="clientes">Clientes</a>
+        <a href="#funciones" data-tab="productos">Productos</a>
+        <a href="#funciones" data-tab="reportes">Reportes</a>
+        <a href="#contacto">Contacto</a>
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost">Iniciar sesión</a>
+          <a href="#" class="btn btn--primary">Crear cuenta</a>
+        </div>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1>Tu libreta de fiao, <span class="hero__accent">ahora digital.</span></h1>
+          <p class="lead">FIA'O ordena clientes, deudas y pagos de tu tienda en Panamá. Sin papeles perdidos ni cuentas a mano.</p>
+          <div class="hero__cta">
+            <a href="#" class="btn btn--primary btn--lg">Crear cuenta gratis</a>
+            <a href="#demo" class="btn btn--ghost btn--lg">Probar la libreta</a>
+          </div>
+        </div>
+
+        <!-- Demo interactiva -->
+        <div class="hero__visual">
+          <img class="hero__phone" src="../assets/Telefono%20Fiao.avif" alt="App FIA'O en un celular mostrando la libreta de clientes" fetchpriority="high">
+          <div class="ledger reveal" id="demo" aria-label="Demostración de la libreta">
+          <div class="ledger__top">
+            <div>
+              <p class="ledger__name">Doña Rosa</p>
+              <p class="ledger__meta">Cliente desde marzo</p>
+            </div>
+            <span class="badge" id="badge">Con saldo</span>
+          </div>
+          <p class="ledger__label">Debe</p>
+          <p class="ledger__amount">B/. <span id="amount">48.50</span></p>
+          <div class="ledger__actions">
+            <button class="btn btn--pay" id="payBtn" type="button">Registrar pago B/. 10</button>
+            <button class="btn btn--ghost" id="creditBtn" type="button">Fiar B/. 5</button>
+          </div>
+          <ul class="ledger__list" id="movements" aria-live="polite">
+            <li><span>Pan y leche</span><strong class="neg">+ B/. 6.50</strong></li>
+            <li><span>Pago en efectivo</span><strong class="pos">− B/. 20.00</strong></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="section section--tint" id="problema">
+      <div class="container">
+        <h2 class="reveal">El cuaderno de papel te hace perder tiempo y dinero</h2>
+        <div class="problems">
+          <article class="problem reveal">
+            <h3>Páginas que se pierden</h3>
+            <p>Un cuaderno mojado o extraviado puede borrar meses de cuentas.</p>
+          </article>
+          <article class="problem reveal">
+            <h3>Sumas hechas a mano</h3>
+            <p>Un error pequeño termina en discusiones con tus clientes.</p>
+          </article>
+          <article class="problem reveal">
+            <h3>No sabes quién debe más</h3>
+            <p>Sin un resumen claro es difícil decidir a quién cobrar primero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONES (pestañas) -->
+    <section class="section" id="funciones">
+      <div class="container">
+        <h2 class="reveal">Todo lo que tu libreta hacía, pero ordenado</h2>
+        <div class="tabs reveal">
+          <div class="tabs__list" role="tablist" aria-label="Funciones">
+            <button role="tab" class="tab is-active" data-tab="credito" aria-selected="true">Crédito</button>
+            <button role="tab" class="tab" data-tab="clientes" aria-selected="false">Clientes</button>
+            <button role="tab" class="tab" data-tab="productos" aria-selected="false">Productos</button>
+            <button role="tab" class="tab" data-tab="reportes" aria-selected="false">Reportes</button>
+          </div>
+          <div class="panel is-active" data-panel="credito" role="tabpanel">
+            <h3>Registra cada fiado en segundos</h3>
+            <p>Anota lo que se lleva el cliente, guarda sus pagos y mira el saldo actualizado al instante.</p>
+          </div>
+          <div class="panel" data-panel="clientes" role="tabpanel">
+            <h3>Cada cliente con su historial</h3>
+            <p>Guarda nombre y teléfono, y consulta todo lo que ha comprado y pagado.</p>
+          </div>
+          <div class="panel" data-panel="productos" role="tabpanel">
+            <h3>Tus productos a la mano</h3>
+            <p>Crea tu lista con precios para que fiar sea tocar y listo.</p>
+          </div>
+          <div class="panel" data-panel="reportes" role="tabpanel">
+            <h3>Sabe cuánto te deben</h3>
+            <p>Ve el total pendiente y los clientes con más saldo para cobrar con orden.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASOS -->
+    <section class="section section--tint" id="como-empezar">
+      <div class="container">
+        <h2 class="reveal">Empieza en tres pasos</h2>
+        <ol class="steps">
+          <li class="reveal"><span class="steps__n">1</span><div><h3>Crea tu cuenta</h3><p>Solo necesitas tu correo.</p></div></li>
+          <li class="reveal"><span class="steps__n">2</span><div><h3>Agrega a tus clientes</h3><p>Pasa los nombres de tu cuaderno a FIA'O.</p></div></li>
+          <li class="reveal"><span class="steps__n">3</span><div><h3>Registra fiados y pagos</h3><p>El saldo se calcula solo.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="section" id="preguntas">
+      <div class="container container--narrow">
+        <h2 class="reveal">Preguntas frecuentes</h2>
+        <details class="faq reveal"><summary>¿Necesito saber de tecnología?</summary><p>No. Si sabes anotar en un cuaderno, sabes usar FIA'O.</p></details>
+        <details class="faq reveal"><summary>¿Sirve para cualquier negocio pequeño?</summary><p>Fue pensada para tiendas y negocios de barrio que fían a sus clientes.</p></details>
+        <details class="faq reveal"><summary>¿Dónde puedo usarla?</summary><p>Desde la app y desde el navegador de tu celular o computadora.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--blue" id="contacto">
+      <div class="container contact">
+        <div class="reveal">
+          <h2>Hablemos de tu negocio</h2>
+          <p class="lead">Cuéntanos cómo llevas hoy tus cuentas y te ayudamos a empezar.</p>
+        </div>
+        <form class="form reveal" id="form" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small class="error" data-for="name"></small>
+
+          <label for="email">Correo</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <small class="error" data-for="email"></small>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <small class="error" data-for="message"></small>
+
+          <button class="btn btn--light btn--lg" type="submit">Enviar mensaje</button>
+          <p class="form__ok" id="formOk" role="status" hidden>Mensaje enviado. Te responderemos pronto.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="logo">FIA'O</p>
+      <p>© 2026 FIA'O. Hecho para los negocios de Panamá.</p>
+      <nav aria-label="Legal">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Accesibilidad</a>
+      </nav>
+    </div>
+  </footer>
+
+ <script src="../Javas/Script.js"></script>
+</body>
+</html>
